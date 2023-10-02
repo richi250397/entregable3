@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "fl0user",
+    "password": "kcj14HoUEOrf",
+    "database": "tareas",
+    "host": "ep-ancient-smoke-90382358.ap-southeast-1.aws.neon.fl0.io",
+    "dialect": "postgres",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "require": true
+      }
+    }
+  },
+  "test": {
+    "username": "fl0user",
+    "password": "kcj14HoUEOrf",
+    "database": "tareas",
+    "host": "ep-ancient-smoke-90382358.ap-southeast-1.aws.neon.fl0.io",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "fl0user",
+    "password": "kcj14HoUEOrf",
+    "database": "tareas",
+    "host": "ep-ancient-smoke-90382358.ap-southeast-1.aws.neon.fl0.io",
+    "dialect": "postgres"
+  }
+}
