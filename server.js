@@ -15,26 +15,8 @@ app.use(express.urlencoded({ extended: true }));
 
 const db = require("./app/models");
 
-const User = db.user;
-const Task = db.task;
-const Category = db.category;
-
-User.hasMany(Task, { foreignKey: "userId", as: "tasks" });
-Task.belongsTo(User, {
-  foreignKey: "userId",
-  as: "user"
-});
-
-Category.hasMany(Task, { foreignKey: "categoryId", as: "tasks" });
-Task.belongsTo(Category, {
-  foreignKey: "categoryId",
-  as: "category"
-});
-
-
-
-db.sequelize.sync({ force: true }).then(() => {
-  console.log("Drop and re-sync db.");
+db.sequelize.sync({ force: false }).then(() => {
+  console.log("Sync db.");
 });
 
 app.get("/", (req, res) => {

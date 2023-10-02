@@ -40,8 +40,20 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.homeworks = require("./task.model.js")(sequelize, Sequelize);
-db.homeworks = require("./user.model.js")(sequelize, Sequelize);
-db.homeworks = require("./category.model.js")(sequelize, Sequelize);
+db.task = require("./task.model.js")(sequelize, Sequelize);
+db.user = require("./user.model.js")(sequelize, Sequelize);
+db.category = require("./category.model.js")(sequelize, Sequelize);
+
+db.user.hasMany(db.task, { foreignKey: "userId", as: "tasks" });
+db.task.belongsTo(db.user, {
+  foreignKey: "userId",
+  as: "user"
+});
+
+db.category.hasMany(db.task, { foreignKey: "categoryId", as: "tasks" });
+db.task.belongsTo(db.category, {
+  foreignKey: "categoryId",
+  as: "category"
+});
 
 module.exports = db;

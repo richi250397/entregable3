@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "fl0user",
-    "password": "kcj14HoUEOrf",
-    "database": "tareas",
-    "host": "ep-ancient-smoke-90382358.ap-southeast-1.aws.neon.fl0.io",
+    "password": "2hjUKvlqrIb5",
+    "database": "admindatabase",
+    "host": "ep-frosty-tooth-48245050.ap-southeast-1.aws.neon.fl0.io",
     "dialect": "postgres",
     "ssl": true,
     "dialectOptions": {
@@ -14,16 +14,28 @@
   },
   "test": {
     "username": "fl0user",
-    "password": "kcj14HoUEOrf",
-    "database": "tareas",
-    "host": "ep-ancient-smoke-90382358.ap-southeast-1.aws.neon.fl0.io",
-    "dialect": "postgres"
+    "password": "2hjUKvlqrIb5",
+    "database": "admindatabase",
+    "host": "ep-frosty-tooth-48245050.ap-southeast-1.aws.neon.fl0.io",
+    "dialect": "postgres",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "require": true
+      }
+    }
   },
   "production": {
     "username": "fl0user",
-    "password": "kcj14HoUEOrf",
-    "database": "tareas",
-    "host": "ep-ancient-smoke-90382358.ap-southeast-1.aws.neon.fl0.io",
-    "dialect": "postgres"
+    "password": "2hjUKvlqrIb5",
+    "database": "admindatabase",
+    "host": "ep-frosty-tooth-48245050.ap-southeast-1.aws.neon.fl0.io",
+    "dialect": "postgres",
+    "ssl": true,
+    "dialectOptions": {
+      "ssl": {
+        "require": true
+      }
+    }
   }
 }
